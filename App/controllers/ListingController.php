@@ -16,15 +16,15 @@ class ListingController
     public function index()
     {
         $listings = $this->db->query("SELECT * FROM listings")->fetchAll();
-        loadView("home", ["listings" => $listings]);
+        loadView("listings/index", ["listings" => $listings]);
     }
     public function create()
     {
         loadView("listings/create");
     }
-    public function show()
+    public function show($params)
     {
-        $id = $_GET["id"] ?? '';
+        $id = $params["id"] ?? '';
 
         $params = [
             "id" => $id
@@ -33,6 +33,11 @@ class ListingController
 
         $listing = $this->db->query('SELECT * FROM listings WHERE id = :id', $params)->fetch();
         // inspect($listing);
+
+        if (!$listing) {
+            ErrorController::notFound('Listing not found');
+            return;
+        }
         loadView("listings/show", ["listing" => $listing]);
     }
 }

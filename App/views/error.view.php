@@ -10,6 +10,10 @@
         <p class="text-center text-2xl mb-4">
             <?= $message ?>
         </p>
+        <a href="/listings" class="block text-xl text-center">
+            <i class="fa fa-arrow-alt-circle-left"></i>
+            Go back listings
+        </a>
     </div>
 </section>
 
