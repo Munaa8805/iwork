@@ -1,0 +1,16 @@
+{
+    "name": "munaa8805/iwork",
+    "description": "iWork is a job listing application",
+    "authors": [
+        {
+            "name": "Munaa",
+            "email": "munaa.tsetsegmaa@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Framework\\": "Framework/",
+            "App\\": "App/"
+        }
+    }
+}

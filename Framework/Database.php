@@ -1,9 +1,18 @@
 <?php
 
 
+namespace Framework;
+
+use PDO;
+
 class Database
 {
     public $conn;
+    /**
+     * Constructor for Database class
+     * 
+     * @param array $config
+     */
     public function __construct($config)
     {
         $dns = "mysql:host={$config['host']};port={$config['port']};dbname={$config['dbname']}";
@@ -19,6 +28,15 @@ class Database
             throw new Exception("Database connection failed: " . $e->getMessage());
         }
     }
+
+    /**
+     * Query the database
+     * 
+     * @param string $query
+     * 
+     * @return PDOStatement
+     * @throws PDOException
+     */
     public function query($sql, $params = [])
     {
         try {
