@@ -25,7 +25,7 @@ class Database
             $this->conn = new PDO($dns, $config['username'], $config['password'], $options);
             // echo "Database connection successful";
         } catch (PDOException $e) {
-            throw new Exception("Database connection failed: " . $e->getMessage());
+            throw new Exception("Database connection failed: {$e->getMessage()}");
         }
     }
 
