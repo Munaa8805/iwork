@@ -1,4 +1,5 @@
 <?php
+session_start();
 require __DIR__ . "/../vendor/autoload.php";
 require "../helpers.php";
 
@@ -16,7 +17,14 @@ use Framework\Router;
 //     }
 // });
 
+
+
+
+
 // Instatiate the router
+
+
+
 
 $router = new Router();
 

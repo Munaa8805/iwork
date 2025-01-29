@@ -74,8 +74,9 @@
                     class="w-full px-4 py-2 border rounded focus:outline-none" <?= $listing["phone"] ?? "" ?> />
             </div>
             <div class="mb-4">
-                <input type="email" name="email" placeholder="Email Address For Applications" value="test@tet.com"
-                    class="w-full px-4 py-2 border rounded focus:outline-none" <?= $listing["email"] ?? "" ?> />
+                <input type="email" name="email" placeholder="Email Address For Applications"
+                    value=" <?= $listing["email"] ?? "" ?>" class="w-full px-4 py-2 border rounded focus:outline-none"
+                    <?= $listing["email"] ?? "" ?> />
             </div>
             <button class="w-full bg-green-500 hover:bg-green-600 text-white px-4 py-2 my-3 rounded focus:outline-none">
                 Save
