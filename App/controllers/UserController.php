@@ -111,4 +111,13 @@ class UserController
 
         redirect('/auth/login');
     }
+    public function logout()
+    {
+        Session::clear('user');
+        Session::destroy();
+
+        $params = session_get_cookie_params();
+        setcookie('PHPSESSID', '', time() - 3600, $params['path'], $params['domain']);
+        redirect('/');
+    }
 }
