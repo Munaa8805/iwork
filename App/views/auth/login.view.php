@@ -28,7 +28,7 @@
 
             <p class="mt-4 text-gray-500">
                 Don't have an account?
-                <a class="text-blue-900" href="/auth/create">Register</a>
+                <a class="text-blue-900" href="/auth/register">Register</a>
             </p>
         </form>
     </div>
