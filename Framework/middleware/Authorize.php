@@ -8,11 +8,9 @@ class Authorize
 {
     /**
      * Check if user is authenticated
-     * @param string $role
+     * 
      * @return bool
      */
-
-
     public function isAuthenticated()
     {
         return Session::has('user');
